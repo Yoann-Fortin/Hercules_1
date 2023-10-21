@@ -24,6 +24,10 @@ class Fighter {
 
       return defender.life = defender.life - hitValue <=  0 ? 0 : defender.life - hitValue
    }
+
+   isAlive() {
+      return this.life > 0;
+   }
 };
 
 module.exports = Fighter;

@@ -11,7 +11,7 @@ const Nemean = new Fighter('Nemean', 11, 13);
 // Quand l'un des deux à 0 points de vie, affiche le gagnant et le perdant
 // Pour chaque tour de boucle , afficher le round et le déroulé du round
 
-for (let round = 0; Heracles.life > 0 && Nemean.life > 0; round++) {
+for (let round = 0; Heracles.isAlive() && Nemean.isAlive(); round++) {
    console.log(`Round n° ${round}`);
    Heracles.fight(Nemean);
    console.log(`${Heracles.name} attack ${Nemean.name} - ${Nemean.name} ${Nemean.life} points life`);
