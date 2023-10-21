@@ -22,11 +22,18 @@ class Fighter {
 
       const hitValue = hit - defender.dexterity < 0 ? 0 : hit - defender.dexterity;
 
-      return defender.life = defender.life - hitValue <=  0 ? 0 : defender.life - hitValue
+      return (
+         this.showAttack(defender),
+         defender.life = defender.life - hitValue <=  0 ? 0 : defender.life - hitValue
+      )
    }
 
    isAlive() {
       return this.life > 0;
+   }
+
+   showAttack(defender) {
+      return console.log(`${this.name} attack ${defender.name} - ${defender.name} ${defender.life} points life`);
    }
 };
 
