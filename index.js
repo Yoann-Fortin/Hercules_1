@@ -20,10 +20,10 @@ for (let round = 0; Heracles.isAlive() && Nemean.isAlive(); round++) {
    }
 }
 
-if (Heracles.life > Nemean.life) {
+if (Heracles.isAlive()) {
    console.log(`${Nemean.name} is dead`);
-   console.log(`${Heracles.name} wins (${Heracles.life})`);
+   console.log(`${Heracles.name} wins (${Heracles.life} points life)`);
 } else {
    console.log(`${Heracles.name} is dead`);
-   console.log(`${Nemean.name} wins (${Nemean.life})`);
+   console.log(`${Nemean.name} wins (${Nemean.life} points life)`);
 }
